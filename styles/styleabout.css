@@ -1,0 +1,36 @@
+*{
+    margin:0; /*distância da margem até a tela// Devemos lembrar, que mesmo não declarando a propriedade margem no CSS, o próprio navegador adiciona valores para a margem padrão aos elementos na tela. */  
+    padding:0;  /*distância dos elementos até a margem */
+}
+body{
+    background-color: black;
+    color: #F6F6F6;
+    /* height: 100vh;  /* altura da borda = 100 view port height, ou seja ocupará 100% da altura da tela do dispositivo, usamos esta propriedade quando a nossa página ainda não possui todas as partes necessárias para ficar completa, por exemplo, o Header, Main, Footer... */
+    box-sizing: border-box; /* há alteração no cálculo padrão que conhecemos, fazendo com que o navegador passe a considerar a altura e largura do elemento contando o ´padding´ e o ´border´ do elemento. */ 
+}  
+.cabeçalho{
+    padding: 2% 0% 0% 15%;  /* São so valores do padding > top, right, buttom  e left */ 
+}
+.cabeçalho_menu{
+    display: flex;
+    align-items: center;
+    gap:80px;
+}
+.cabeçalho_menu_link{
+    font-size:24px;
+    font-family: 'Mont Serrat', sans-serif;
+    font-weight: 600;
+    color:#22D4FD;
+    text-decoration: none;
+}
+.rodape{
+    color: #000000f8;
+    background-color: #22D4FD;
+    font-weight: 400;
+    font-family: 'Mont Serrat', sans-serif;
+    font-size:24px;
+    display: flex;
+    justify-content: center;
+    border: 1px solid;
+    padding: 23.64px 719px;
+  }

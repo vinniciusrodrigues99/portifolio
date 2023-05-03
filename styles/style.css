@@ -1,0 +1,191 @@
+@import url('https://fonts.googleapis.com/css2?family=Krona+One&family=Montserrat:wght@400;600&display=swap'); /*importando duas fontes do google Fonts */
+
+:root{ /* Declarando variáveis no CSS */ 
+   
+    --cor--primaria: #1B2430;
+    --cor--secundaria: #F6F6F6;
+    --cor--terciaria: #22D4FD;
+    --cor--hover: #272727; 
+
+
+    --fonte--primaria: 'Krona One', sans-serif; 
+    --fonte--secundaria: 'Mont Serrat', sans-serif;  
+}
+* {
+    margin:0; /*distância da margem até a tela// Devemos lembrar, que mesmo não declarando a propriedade margem no CSS, o próprio navegador adiciona valores para a margem padrão aos elementos na tela. */  
+    padding:0;  /*distância dos elementos até a margem */
+}
+    body{
+    background-color: var(--cor--primaria);
+    color: var(--cor--secundaria);
+    /* height: 100vh;  /* altura da borda = 100 view port height, ou seja ocupará 100% da altura da tela do dispositivo, usamos esta propriedade quando a nossa página ainda não possui todas as partes necessárias para ficar completa, por exemplo, o Header, Main, Footer... */
+    box-sizing: border-box; /* há alteração no cálculo padrão que conhecemos, fazendo com que o navegador passe a considerar a altura e largura do elemento contando o ´padding´ e o ´border´ do elemento. */ 
+}   
+.cabeçalho {
+    padding: 2% 0% 0% 15%;  /* São so valores do padding > top, right, buttom  e left */ 
+}
+.cabeçalho_menu {
+    display: flex;
+    align-items: center;
+    gap:80px;
+}
+.cabeçalho_menu_link {
+    font-size:24px;
+    font-family: var(--fonte--secundaria);
+    font-weight: 600;
+    color: var(--cor--terciaria);
+    text-decoration: none;
+}
+
+.apresentacao {   /* Classe da minha main que tem os conteúdos principais da minha página */
+    /*margin:10% 20%; /* A porcentagem permite que criemos módulos que sempre vão se readaptar para ocupar a quantidade especificada. Por exemplo, se definirmos um elemento tendo um tamanho de 50%, independente do dispositivo em questão, esse módulo sempre ocupará metade do espaço que lhe cabe (caso esteja dentro de algum outro elemento). */ 
+    display:flex;   /* relaciona o posicionamento de uma seção de elementos. Esta propriedade define um flex container; inline ou block dependendo dos valores passados. Coloca todos os elementos-filhos diretos num contexto Flex.*/
+    align-items: center;
+    justify-content: space-between;  /* os ítens são distribuídos de forma igual ao longo da linha; o primeiro ítem junto à borda inicial da linha, o último junto à borda final da linha. */
+    padding:5% 15%; /*preenchimento superior e inferior de 8, preenchimento direito e esquerdo com 15 */ 
+}
+.apresentacao_conteudo{ /*largura da minha section de acordo com o figma*/
+    width: 615px;
+    display:flex;
+    flex-direction: column; /*para que os elementos do meu container fiquem alinhados numa direção de coluna */ 
+    gap: 40px; /*espaçamento entre os elementos na direção column // A propriedade CSS gap define os espaços (gutters (en-US)) entre as linhas e colunas. É uma propriedade shorthand para row-gap (en-US) e column-gap (en-US). */ 
+}
+.apresentacao_conteudo_titulo{ 
+    font-size: 36px; /*tamanho da fonte do meu título */ 
+    font-family: var(--fonte--primaria);  /*fonte importada do Google Fonts */  
+}
+.apresentacao_conteudo_paragrafo{
+    font-size: 24px;
+    font-family: 'Montserrat', sans-serif; /*Sans-serif para ficar com o aspecto arredondado */ 
+}
+.titulo-destaque{  /*aqui estou selecionando uma classe que eu criei na tag <strong> para individualizar esse trecho em específico fazendo assim com que as outras partes em que eu utilizei a tag não sejam afetadas por esses atributos CSS  */
+    color: var(--cor--terciaria);
+}
+.apresentacao_conteudo_links{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;  /*Alinhas os elementos na direção de uma coluna, por padrão eles são alinhados na horizantal */ 
+    align-items: center; /* alinhas os itens no centro do meu bloco */ 
+    gap: 32px;
+}
+.apresentacao_conteudo_links_subtitulo{
+    font-family: var(--fonte--primaria);
+    font-weight: 400; /*espessura/peso da fonte */ 
+    font-size: 24px;
+}
+/* .apresentacao_conteudo_links_botoes{      estilo dos botões do primeiro projeto que está no git
+    width:280px;
+    background-color: #22D4FD;
+    text-align: center;
+    display:flex;
+    justify-content: center;
+    font-size: 24px;
+    border-radius: 16px;
+    padding: 21.5px 0;  /*aqui estou colocando a distância dos elementos até a pmargem, o primeiro valor representa a distância vertical e o segundo a distância na horizontal. */
+    /* color:black;
+    font-family: 'Montserrat', sans-serif; 
+    font-weight: 600; /*peso da fonte */ 
+    /* text-decoration: none; tirei o sublinhado do texto  */
+
+    /* aplicando o estilo hover nas minhas bordas */ 
+    /* transition: 1s; 
+    font-size: 24px;
+    cursor: pointer; 
+}
+ */
+ .apresentacao_conteudo_links_botoes{
+    width: 378px;
+    border: 2px solid var(--cor--terciaria); /* espessura da borda, estilo da borda e cor da borda */ 
+    border-radius: 8px;
+    color: var(--cor--secundaria);
+    font-family: var(--fonte--secundaria);
+    font-size: 24px;
+    text-align: center;
+    font-weight: 600;
+    padding: 21.5px 0;
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 16px;
+}
+.apresentacao_conteudo_links_botoes:hover{ /*propriedade que muda a borda quando eu passo o cursor do mouse por cima */ 
+    transition: 1s; 
+    font-size: 26px;
+    cursor: pointer;
+    background-color: var(--cor--hover);
+    padding: 3%;
+    color: var(--cor--terciaria);
+}
+.apresentacao_conteudo_links_botoes:visited { /*Uma dos usos do Hover, neste caso o link ficará desta cor se eu já tive visitado o link antes */ 
+    color: #681da8;; 
+}
+.imagem{
+    box-sizing: border-box;
+    border: 1px solid var(--cor--terciaria);
+    border-radius: 10px;
+    border-style: solid; 
+}
+.div_imagem{
+    margin-top: -76%;
+    display: flex;
+    justify-content: flex-end; /*alinhamento horizontal */
+    align-items: flex-start;    /*alinhamento vertical */
+
+}
+.imagem1{
+    box-sizing: border-box;
+    border: 1px solid var(--cor--terciaria);
+    border-radius: 1px;
+    border-style: solid; 
+    margin: 0px 0px;
+    padding: 1px 1px;
+    }
+.rodape{
+    color: var(--cor--primaria);
+    background-color: var(--cor--terciaria);
+    font-weight: 400;
+    font-family: var(--fonte--secundaria);
+    font-size:24px;
+    display: flex;
+    justify-content: center;
+    border: 1px solid;
+    padding: 23.64px 719px;
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Definição de classe: o atributo class permite ao CSS selecionar e acessar elementos específicos através dos seletores de classe */
