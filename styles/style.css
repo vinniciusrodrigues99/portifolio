@@ -152,7 +152,7 @@
     display: flex;
     justify-content: center;
     border: 1px solid;
-    padding: 23.64px 670px;
+    padding: 23.64px 30%;
   }
         /*media queries, neste caso estou aplicando estas propriedades de estilo se a condição dentro da expressão media for verdadeira*/ 
 @media (max-width: 1200px){
