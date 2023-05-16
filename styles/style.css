@@ -30,7 +30,7 @@
     gap:80px;
 }
 .cabeçalho_menu_link {
-    font-size:24px;
+    font-size: 1.5rem;
     font-family: var(--fonte--secundaria);
     font-weight: 600;
     color: var(--cor--terciaria);
@@ -42,20 +42,21 @@
     display:flex;   /* relaciona o posicionamento de uma seção de elementos. Esta propriedade define um flex container; inline ou block dependendo dos valores passados. Coloca todos os elementos-filhos diretos num contexto Flex.*/
     align-items: center;
     justify-content: space-between;  /* os ítens são distribuídos de forma igual ao longo da linha; o primeiro ítem junto à borda inicial da linha, o último junto à borda final da linha. */
-    padding:5% 15%; /*preenchimento superior e inferior de 8, preenchimento direito e esquerdo com 15 */ 
+    padding:5% 15%; /*preenchimento superior e inferior de 5, preenchimento direito e esquerdo com 15 */ 
+    gap:82px;
 }
 .apresentacao_conteudo{ /*largura da minha section de acordo com o figma*/
-    width: 615px;
+    width: 50%; /*615 px unidade de medida absoluta */ 
     display:flex;
     flex-direction: column; /*para que os elementos do meu container fiquem alinhados numa direção de coluna */ 
     gap: 40px; /*espaçamento entre os elementos na direção column // A propriedade CSS gap define os espaços (gutters (en-US)) entre as linhas e colunas. É uma propriedade shorthand para row-gap (en-US) e column-gap (en-US). */ 
 }
 .apresentacao_conteudo_titulo{ 
-    font-size: 36px; /*tamanho da fonte do meu título */ 
+    font-size: 2.25rem; /*tamanho da fonte do meu título/ px é uma unidade de medida absoluta, iremos utilizar o REM que é uma unidade de medida relativa para que a nossa página se molde conforme as especificações do navegador. 16px = 1rem */ 
     font-family: var(--fonte--primaria);  /*fonte importada do Google Fonts */  
 }
 .apresentacao_conteudo_paragrafo{
-    font-size: 24px;
+    font-size: 1.5rem;
     font-family: 'Montserrat', sans-serif; /*Sans-serif para ficar com o aspecto arredondado */ 
 }
 .titulo-destaque{  /*aqui estou selecionando uma classe que eu criei na tag <strong> para individualizar esse trecho em específico fazendo assim com que as outras partes em que eu utilizei a tag não sejam afetadas por esses atributos CSS  */
@@ -71,7 +72,7 @@
 .apresentacao_conteudo_links_subtitulo{
     font-family: var(--fonte--primaria);
     font-weight: 400; /*espessura/peso da fonte */ 
-    font-size: 24px;
+    font-size: 1.5rem;
 }
 /* .apresentacao_conteudo_links_botoes{      estilo dos botões do primeiro projeto que está no git
     width:280px;
@@ -91,15 +92,15 @@
     /* transition: 1s; 
     font-size: 24px;
     cursor: pointer; 
-}
+}   
  */
  .apresentacao_conteudo_links_botoes{
-    width: 378px;
+    width: 50%; /* unidade de medida absoluta 378px */ 
     border: 2px solid var(--cor--terciaria); /* espessura da borda, estilo da borda e cor da borda */ 
     border-radius: 8px;
     color: var(--cor--secundaria);
     font-family: var(--fonte--secundaria);
-    font-size: 24px;
+    font-size: 1.5rem;
     text-align: center;
     font-weight: 600;
     padding: 21.5px 0;
@@ -111,7 +112,7 @@
 }
 .apresentacao_conteudo_links_botoes:hover{ /*propriedade que muda a borda quando eu passo o cursor do mouse por cima */ 
     transition: 1s; 
-    font-size: 26px;
+    font-size: 1.5rem;
     cursor: pointer;
     background-color: var(--cor--hover);
     padding: 3%;
@@ -121,6 +122,7 @@
     color: #681da8;; 
 }
 .imagem{
+    width: 40%;
     box-sizing: border-box;
     border: 1px solid var(--cor--terciaria);
     border-radius: 10px;
@@ -146,13 +148,30 @@
     background-color: var(--cor--terciaria);
     font-weight: 400;
     font-family: var(--fonte--secundaria);
-    font-size:24px;
+    font-size:1.5rem;
     display: flex;
     justify-content: center;
     border: 1px solid;
-    padding: 23.64px 719px;
+    padding: 23.64px 30%;
   }
+        /*media queries, neste caso estou aplicando estas propriedades de estilo se a condição dentro da expressão media for verdadeira*/ 
+@media (max-width: 1200px){
+   .apresentacao{           /* Se a largura da tela for de 1200px ou menor, ou seja se a condição for verdadeira as propriedades serão aplicadas, neste caso a direção do flexbox será column-reverse */ 
+        flex-direction: column-reverse;
+        padding: 5%;
 
+    }
+    .cabeçalho{
+        padding: 10%;
+    }
+    .cabeçalho_menu{
+        justify-content: center;
+    }
+    .apresentacao_conteudo{
+        width: auto; /*Propriedade que irá garantir que a largura ocupe todo o espaço que a classe pai tem, neste caso o padding de 5%*/ 
+    }
+    
+}
 
 
 
