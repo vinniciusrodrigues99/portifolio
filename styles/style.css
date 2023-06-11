@@ -138,10 +138,10 @@
 .imagem1{
     box-sizing: border-box;
     border: 1px solid var(--cor--terciaria);
-    border-radius: 1px;
+    border-radius: 10px;
     border-style: solid; 
     margin: 0px 0px;
-    padding: 1px 1px;
+    padding: 0px 0px;
     }
 .rodape{
     color: var(--cor--primaria);
@@ -166,9 +166,25 @@
     }
     .cabeçalho_menu{
         justify-content: center;
+        gap: 50px;
+        
     }
     .apresentacao_conteudo{
         width: auto; /*Propriedade que irá garantir que a largura ocupe todo o espaço que a classe pai tem, neste caso o padding de 5%*/ 
+    }
+    .imagem1{
+        width: 40%;
+        border-radius: 10px;
+        box-sizing: border-box;
+        border: 1px solid var(--cor--terciaria);
+        
+    }
+    .div_imagem{
+        margin-top: 0%;
+        display: flex;
+        justify-content: center; /*alinhamento horizontal */
+        align-items: center;    /*alinhamento vertical */
+    
     }
     
 }
