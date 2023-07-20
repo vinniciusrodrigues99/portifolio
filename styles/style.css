@@ -152,7 +152,7 @@
     display: flex;
     justify-content: center;
     border: 1px solid;
-    padding: 23.64px 30%;
+    padding: 23.64px 10%;
   }
         /*media queries, neste caso estou aplicando estas propriedades de estilo se a condição dentro da expressão media for verdadeira*/ 
 @media (max-width: 1200px){
@@ -185,6 +185,13 @@
         justify-content: center; /*alinhamento horizontal */
         align-items: center;    /*alinhamento vertical */
     
+    }
+    .rodape
+    {
+    margin: 0.5em 0 0em 0;
+    padding: 1em 1em 1em 1em;
+    font-size: 1.1em;
+
     }
     
 }
