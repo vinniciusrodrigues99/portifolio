@@ -2,7 +2,7 @@
 
 
 ## <center>Meu primeiro projeto do portifólio</center>
-![imagemreadme](https://github.com/vinniciusrodrigues99/portifolio/blob/main/assets/nutrien.jfif)
+![imagemreadme](https://github.com/vinniciusrodrigues99/portifolio/blob/main/assets/Site_do_portifolio.png)
 ### Ferramentas utilizadas:
 * HTML
 
