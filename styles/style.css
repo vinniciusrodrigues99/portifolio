@@ -1,3 +1,5 @@
+
+/* Definição de classe: o atributo class permite ao CSS selecionar e acessar elementos específicos através dos seletores de classe */
 @import url('https://fonts.googleapis.com/css2?family=Krona+One&family=Montserrat:wght@400;600&display=swap'); /*importando duas fontes do google Fonts */
 
 :root{ /* Declarando variáveis no CSS */ 
@@ -46,10 +48,17 @@
     gap:82px;
 }
 .apresentacao_conteudo{ /*largura da minha section de acordo com o figma*/
-    width: 50%; /*615 px unidade de medida absoluta */ 
+    width: 100%; /*615 px unidade de medida absoluta */ 
     display:flex;
-    flex-direction: column; /*para que os elementos do meu container fiquem alinhados numa direção de coluna */ 
+    flex-direction:column; /*para que os elementos do meu container fiquem alinhados numa direção de coluna */ 
     gap: 40px; /*espaçamento entre os elementos na direção column // A propriedade CSS gap define os espaços (gutters (en-US)) entre as linhas e colunas. É uma propriedade shorthand para row-gap (en-US) e column-gap (en-US). */ 
+} 
+.apresentacao_conteudo_curriculo{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 100%;
+    align-items:flex-start; 
 }
 .apresentacao_conteudo_titulo{ 
     font-size: 2.25rem; /*tamanho da fonte do meu título/ px é uma unidade de medida absoluta, iremos utilizar o REM que é uma unidade de medida relativa para que a nossa página se molde conforme as especificações do navegador. 16px = 1rem */ 
@@ -58,6 +67,9 @@
 .apresentacao_conteudo_paragrafo{
     font-size: 1.5rem;
     font-family: 'Montserrat', sans-serif; /*Sans-serif para ficar com o aspecto arredondado */ 
+}
+.experiencias{
+    width: 100%;
 }
 .titulo-destaque{  /*aqui estou selecionando uma classe que eu criei na tag <strong> para individualizar esse trecho em específico fazendo assim com que as outras partes em que eu utilizei a tag não sejam afetadas por esses atributos CSS  */
     color: var(--cor--terciaria);
@@ -68,11 +80,14 @@
     flex-direction: column;  /*Alinhas os elementos na direção de uma coluna, por padrão eles são alinhados na horizantal */ 
     align-items: center; /* alinhas os itens no centro do meu bloco */ 
     gap: 32px;
+    text-align: center;
+    
 }
 .apresentacao_conteudo_links_subtitulo{
     font-family: var(--fonte--primaria);
     font-weight: 400; /*espessura/peso da fonte */ 
     font-size: 1.5rem;
+    width: max-content;
 }
 /* .apresentacao_conteudo_links_botoes{      estilo dos botões do primeiro projeto que está no git
     width:280px;
@@ -121,27 +136,45 @@
 .apresentacao_conteudo_links_botoes:visited { /*Uma dos usos do Hover, neste caso o link ficará desta cor se eu já tive visitado o link antes */ 
     color: #681da8;; 
 }
+.curriculo
+{
+    display:flex;   /* relaciona o posicionamento de uma seção de elementos. Esta propriedade define um flex container; inline ou block dependendo dos valores passados. Coloca todos os elementos-filhos diretos num contexto Flex.*/
+    align-items: flex-start;
+    justify-content: space-between;  /* os ítens são distribuídos de forma igual ao longo da linha; o primeiro ítem junto à borda inicial da linha, o último junto à borda final da linha. */
+    padding:5% 15%; /*preenchimento superior e inferior de 5, preenchimento direito e esquerdo com 15 */ 
+    gap:30px;
+    width:fit-content;
+}
 .imagem{
     width: 40%;
     box-sizing: border-box;
     border: 1px solid var(--cor--terciaria);
     border-radius: 10px;
     border-style: solid; 
+    margin-bottom: 45%;
 }
-.div_imagem{
-    margin-top: -76%;
-    display: flex;
-    justify-content: flex-end; /*alinhamento horizontal */
-    align-items: flex-start;    /*alinhamento vertical */
+.nutrien{
+    width: 50%;
+    text-align: right;
+    margin-bottom: 5%;
+         
+}
+.about{
+    margin-top: 0%;
+    margin-bottom: 0;
+}
 
+.div_imagem{
+    margin-right: 0%;
+    margin-top: 10%;
 }
 .imagem1{
     box-sizing: border-box;
     border: 1px solid var(--cor--terciaria);
-    border-radius: 10px;
+    border-radius: 1px;
     border-style: solid; 
     margin: 0px 0px;
-    padding: 0px 0px;
+    padding: 1px 1px;
     }
 .rodape{
     color: var(--cor--primaria);
@@ -152,48 +185,54 @@
     display: flex;
     justify-content: center;
     border: 1px solid;
-    padding: 23.64px 10%;
+    padding: 23.64px 30%;
   }
         /*media queries, neste caso estou aplicando estas propriedades de estilo se a condição dentro da expressão media for verdadeira*/ 
 @media (max-width: 1200px){
    .apresentacao{           /* Se a largura da tela for de 1200px ou menor, ou seja se a condição for verdadeira as propriedades serão aplicadas, neste caso a direção do flexbox será column-reverse */ 
         flex-direction: column-reverse;
         padding: 5%;
-
+        width: auto;
+        gap: 10%;
     }
     .cabeçalho{
-        padding: 10%;
+        padding: -30%;
+        margin-left: 10%;
+        margin-right: 25%;
+        text-align: center;
+        gap: 1%;
     }
     .cabeçalho_menu{
         justify-content: center;
-        gap: 50px;
-        
+        gap: 20%;
+        text-align: center;
     }
     .apresentacao_conteudo{
         width: auto; /*Propriedade que irá garantir que a largura ocupe todo o espaço que a classe pai tem, neste caso o padding de 5%*/ 
     }
-    .imagem1{
-        width: 40%;
-        border-radius: 10px;
-        box-sizing: border-box;
-        border: 1px solid var(--cor--terciaria);
+    .apresentacao_conteudo_curriculo{
+        width: auto;
+    }
+    .curriculo{
+        width: auto;
+        align-items: center;
+    }
+    .imagem{
+        margin-bottom: 15%;
+        width: 80%;
         
     }
-    .div_imagem{
-        margin-top: 0%;
-        display: flex;
-        justify-content: center; /*alinhamento horizontal */
-        align-items: center;    /*alinhamento vertical */
-    
+    .nutrien{
+    margin-top: 2%;;
+    text-align: center;
+    margin-bottom: 5%;
+    width: 110%;
     }
-    .rodape
-    {
-    margin: 0.5em 0 0em 0;
-    padding: 1em 1em 1em 1em;
-    font-size: 1.1em;
-
+    .rodape{
+        padding: 2%;
+        text-align: center;
+        font-size: 1.2em;
     }
-    
 }
 
 
@@ -231,3 +270,4 @@
 
 
 /* Definição de classe: o atributo class permite ao CSS selecionar e acessar elementos específicos através dos seletores de classe */
+>>>>>>> secundaria
