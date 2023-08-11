@@ -1,8 +1,8 @@
 
 
 
-## <center>Meu primeiro projeto do portifólio</center>:
-![imagemreadme](https://github.com/vinniciusrodrigues99/portifolio/assets/108841908/c14fd6e7-9672-41fd-9ef2-5b4472e0d812)
+## <center>Meu primeiro projeto do portifólio</center>
+![imagemreadme](https://github.com/vinniciusrodrigues99/portifolio/blob/main/assets/nutrien.jfif)
 ### Ferramentas utilizadas:
 * HTML
 
